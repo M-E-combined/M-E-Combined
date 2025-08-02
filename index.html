@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  -->
+
+<head>
+    <!-- Same head content as index.html -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>M E Combined | Digital Solutions Provider</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        /* Add smooth scaleY animation to mobile menu */
+        #mobile-menu {
+            transform-origin: top;
+            transition: transform 0.3s ease, max-height 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+            transform: scaleY(0);
+        }
+
+        #mobile-menu.open {
+            transform: scaleY(1);
+            max-height: 500px;
+            /* enough to show all items */
+        }
+    </style>
+</head>
+
+<body class="font-poppins bg-white text-gray-800">
+    <!-- Same navigation as index.html -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold">
+                    <span class="text-gold-500">M E</span> Combined
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-yellow-300 transition"><i class="fas fa-home"></i> Home</a>
+                <a href="services.html" class="hover:text-yellow-300 transition"><i class="fas fa-tools"></i> Services</a>
+                <a href="portfolio.html" class="hover:text-yellow-300 transition"><i class="fas fa-folder"></i> Portfolio</a>
+                <a href="about.html" class="hover:text-yellow-300 transition"><i class="fas fa-users"></i> About Us</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition"><i class="fas fa-comments"></i> Contact</a>
+                <a href="blog.html" class="hover:text-yellow-300 transition"><i class="fas fa-newspaper"></i> Blog</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="flex-col space-y-2 px-4 pb-4 bg-blue-800">
+            <a href="index.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-home"></i> Home</a>
+            <a href="services.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-tools"></i> Services</a>
+            <a href="portfolio.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-folder"></i>
+Portfolio</a>
+            <a href="about.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-users"></i>
+About Us</a>
+            <a href="contact.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-comments"></i>
+ Contact</a>
+            <a href="blog.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-newspaper"></i>
+Blog</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-blue-900 text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 animate-fadeIn">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Transform Your Business with <span
+                        class="text-yellow-400">Digital Excellence</span></h1>
+                <p class="text-xl mb-8">Professional digital solutions tailored to your unique needs. From stunning
+                    websites to powerful business systems.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="contact.html"
+                        class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-6 rounded-lg transition transform hover:scale-105">Get
+                        Started</a>
+                    <a href="services.html"
+                        class="bg-transparent hover:bg-blue-800 text-white font-bold py-3 px-6 border-2 border-white rounded-lg transition transform hover:scale-105">Our
+                        Services</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate-slideIn">
+                <img src="Digital Solutions.jpg" alt="Digital Solutions"
+                    class="rounded-lg shadow-2xl max-w-full h-auto">
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition">
+                    <i class="fas fa-lock text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Secure Payments</h3>
+                    <p class="text-gray-600">Pay only after complete satisfaction</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition">
+                    <i class="fas fa-headset text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+                    <p class="text-gray-600">Dedicated support team</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition">
+                    <i class="fas fa-medal text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Quality Guarantee</h3>
+                    <p class="text-gray-600">Premium quality solutions</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition">
+                    <i class="fas fa-project-diagram text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">10+ Projects</h3>
+                    <p class="text-gray-600">Successful implementations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-blue-900">Digital Solutions</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive services to elevate your digital
+                    presence and streamline operations.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-6xl text-yellow-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Website Design</h3>
+                        <p class="text-gray-600 mb-4">Stunning, responsive websites that captivate your audience and
+                            drive results.</p>
+                        <a href="services.html#web-design"
+                            class="text-yellow-600 font-semibold hover:text-yellow-700 transition">Learn More →</a>
+                    </div>
+                </div>
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center">
+                        <i class="fab fa-whatsapp text-6xl text-yellow-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">WhatsApp Order Systems</h3>
+                        <p class="text-gray-600 mb-4">Streamline your sales with automated WhatsApp ordering solutions.
+                        </p>
+                        <a href="services.html#whatsapp"
+                            class="text-yellow-600 font-semibold hover:text-yellow-700 transition">Learn More →</a>
+                    </div>
+                </div>
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center">
+                        <i class="fas fa-user-shield text-6xl text-yellow-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">User Authentication</h3>
+                        <p class="text-gray-600 mb-4">Secure login systems to protect your data and user information.
+                        </p>
+                        <a href="services.html#auth"
+                            class="text-yellow-600 font-semibold hover:text-yellow-700 transition">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="services.html"
+                    class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">View
+                    All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-blue-900">Recent Work</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Explore some of our successful projects and see what
+                    we can do for you.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="E-commerce Website.jpg" alt="E-commerce Website" class="w-full h-64 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">Complete online store with payment integration</p>
+                        <a href="portfolio.html"
+                            class="text-yellow-600 font-semibold hover:text-yellow-700 transition">View Project →</a>
+                    </div>
+                </div>
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="WhatsApp Order System.jpg" alt="WhatsApp Order System" class="w-full h-64 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold mb-2">Restaurant Order System</h3>
+                        <p class="text-gray-600 mb-4">WhatsApp-based food ordering solution</p>
+                        <a href="portfolio.html"
+                            class="text-yellow-600 font-semibold hover:text-yellow-700 transition">View Project →</a>
+                    </div>
+                </div>
+                <div class="portfolio-item rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="Membership Portal.jpg" alt="Membership Portal" class="w-full h-64 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold mb-2">Membership Portal</h3>
+                        <p class="text-gray-600 mb-4">Secure user authentication and database</p>
+                        <a href="portfolio.html"
+                            class="text-yellow-600 font-semibold hover:text-yellow-700 transition">View Project →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="portfolio.html"
+                    class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">View
+                    Full Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our <span class="text-blue-900">Clients Say</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Don't just take our word for it - hear from our
+                    satisfied clients.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"M E Combined transformed our online presence with a stunning website
+                        that perfectly represents our brand. Their attention to detail is unmatched."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="text-blue-900 font-bold">JD</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">John Doe</h4>
+                            <p class="text-gray-500">CEO, TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The WhatsApp order system they implemented has increased our sales by
+                        40%. It's user-friendly and works flawlessly."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="text-blue-900 font-bold">AS</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Amanda Smith</h4>
+                            <p class="text-gray-500">Owner, Delicious Eats</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Their database solution has streamlined our operations significantly.
+                        The team was professional and delivered on time."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="text-blue-900 font-bold">RJ</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Robert Johnson</h4>
+                            <p class="text-gray-500">Operations Manager, LogisticsPro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Let's discuss how we can help you achieve your digital goals.
+                Contact us today for a free consultation.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="contact.html"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">Get
+                    In Touch</a>
+                <a href="tel:+252619958215"
+                    class="bg-transparent hover:bg-blue-800 text-white font-bold py-3 px-8 border-2 border-white rounded-lg transition transform hover:scale-105">
+                    <i class="fas fa-phone-alt mr-2"></i> Call Us Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4"><span class="text-yellow-400">M E</span> Combined</h3>
+                    <p class="text-gray-400">Providing cutting-edge digital solutions to help businesses thrive in the
+                        online world.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-yellow-400 transition">Services</a>
+                        </li>
+                        <li><a href="portfolio.html"
+                                class="text-gray-400 hover:text-yellow-400 transition">Portfolio</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-yellow-400 transition">About Us</a>
+                        </li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-yellow-400 transition">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#web-design"
+                                class="text-gray-400 hover:text-yellow-400 transition">Website Design</a></li>
+                        <li><a href="services.html#whatsapp"
+                                class="text-gray-400 hover:text-yellow-400 transition">WhatsApp Systems</a></li>
+                        <li><a href="services.html#auth" class="text-gray-400 hover:text-yellow-400 transition">User
+                                Authentication</a></li>
+                        <li><a href="services.html#database"
+                                class="text-gray-400 hover:text-yellow-400 transition">Database Solutions</a></li>
+                        <li><a href="services.html#all-in-one"
+                                class="text-gray-400 hover:text-yellow-400 transition">All-in-One Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i>
+                            <span class="text-gray-400">Mogadishu, Somalia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-yellow-400 mr-2"></i>
+                            <span class="text-gray-400">+252 619958215</span>
+                        </li>
+                        <li class="flex items-center">
+                            <a
+                                href="mailto:infomecombined.com@gmail.com?subject=Hello&body=I%20have%20a%20question%20about..."><i
+                                    class="fas fa-envelope text-yellow-400 mr-2"></i>
+                                <span class="text-gray-400">infomecombined.com@gmail.com </span>
+                            </a>
+                        </li>
+
+                        <li class="flex items-center">
+                            <a
+                                href="https://api.whatsapp.com/send/?phone=252619958215&text&type=phone_number&app_absent=0"><i
+                                    class="fab fa-whatsapp text-yellow-400 mr-2"></i>
+                                <span class="text-gray-400">+252 619958215</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 M E Combined. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="portfolio.html"
+                        class="text-gray-400 hover:text-yellow-400 text-sm transition">portfolio</a>
+                    <a href="services.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Terms of
+                        Service</a>
+                    <a href="blog.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/252619958215"
+        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition transform hover:scale-110 z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script src="js/scripts.js"></script>
+</body>
+<script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('open');
+    });
+</script>
+
+</html>

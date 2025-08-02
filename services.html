@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head content as index.html -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Services | M E Combined</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        /* Add smooth scaleY animation to mobile menu */
+        #mobile-menu {
+            transform-origin: top;
+            transition: transform 0.3s ease, max-height 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+            transform: scaleY(0);
+        }
+        #mobile-menu.open {
+            transform: scaleY(1);
+            max-height: 500px; /* enough to show all items */
+        }
+    </style>
+</head>
+<body class="font-poppins bg-white text-gray-800">
+    <!-- Same navigation as index.html -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold">
+                    <span class="text-gold-500">M E</span> Combined
+                </a>
+            </div>
+           <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-yellow-300 transition"><i class="fas fa-home"></i> Home</a>
+                <a href="services.html" class="hover:text-yellow-300 transition"><i class="fas fa-tools"></i> Services</a>
+                <a href="portfolio.html" class="hover:text-yellow-300 transition"><i class="fas fa-folder"></i> Portfolio</a>
+                <a href="about.html" class="hover:text-yellow-300 transition"><i class="fas fa-users"></i> About Us</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition"><i class="fas fa-comments"></i> Contact</a>
+                <a href="blog.html" class="hover:text-yellow-300 transition"><i class="fas fa-newspaper"></i> Blog</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="flex-col space-y-2 px-4 pb-4 bg-blue-800">
+            <a href="index.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-home"></i> Home</a>
+            <a href="services.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-tools"></i> Services</a>
+            <a href="portfolio.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-folder"></i>
+Portfolio</a>
+            <a href="about.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-users"></i>
+About Us</a>
+            <a href="contact.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-comments"></i>
+ Contact</a>
+            <a href="blog.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-newspaper"></i>
+Blog</a>
+        </div>
+    </nav>
+
+    <!-- Services Hero -->
+    <section class="relative bg-blue-900 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our <span class="text-yellow-400">Services</span></h1>
+            <p class="text-xl max-w-3xl mx-auto">Comprehensive digital solutions tailored to your business needs.</p>
+        </div>
+    </section>
+
+
+    <!-- Services Details -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <!-- Website Design -->
+            <div id="web-design" class="mb-20 scroll-reveal">
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <div class="md:w-1/3 mb-6 md:mb-0">
+                        <div class="bg-blue-100 rounded-lg p-6 h-full flex items-center justify-center">
+                            <i class="fas fa-laptop-code text-6xl text-blue-900"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-10">
+                        <h2 class="text-3xl font-bold mb-4">Website Design & Development</h2>
+                        <p class="text-gray-600 mb-6">We create stunning, responsive websites that not only look great but also perform exceptionally across all devices. Our designs are tailored to your brand identity and optimized for user experience.</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Responsive Design (Mobile, Tablet, Desktop)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>SEO Optimized Structure</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Fast Loading Times</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>User-Friendly Navigation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Custom Design Elements</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Content Management System</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition">Get Your Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WhatsApp Order Systems -->
+            <div id="whatsapp" class="mb-20 scroll-reveal">
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <div class="md:w-1/3 mb-6 md:mb-0 order-1 md:order-2">
+                        <div class="bg-blue-100 rounded-lg p-6 h-full flex items-center justify-center">
+                            <i class="fab fa-whatsapp text-6xl text-blue-900"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pr-10 order-2 md:order-1">
+                        <h2 class="text-3xl font-bold mb-4">WhatsApp Order Systems</h2>
+                        <p class="text-gray-600 mb-6">Leverage the power of WhatsApp to streamline your sales process. Our automated order systems integrate seamlessly with your existing WhatsApp business account, making it easy for customers to place orders.</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Automated Order Processing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Menu/Catalog Integration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Payment Confirmation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Order Tracking</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Customer Support Integration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Multi-language Support</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition">Get WhatsApp System</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Authentication -->
+            <div id="auth" class="mb-20 scroll-reveal">
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <div class="md:w-1/3 mb-6 md:mb-0">
+                        <div class="bg-blue-100 rounded-lg p-6 h-full flex items-center justify-center">
+                            <i class="fas fa-user-shield text-6xl text-blue-900"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-10">
+                        <h2 class="text-3xl font-bold mb-4">User Authentication Systems</h2>
+                        <p class="text-gray-600 mb-6">Secure your digital assets with robust user authentication systems. We implement industry-standard security protocols to protect your data and your users' information.</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Email/Password Login</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Social Media Login</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Two-Factor Authentication</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Password Recovery</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Role-Based Access Control</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Activity Logging</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition">Secure Your System</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Database Solutions -->
+            <div id="database" class="mb-20 scroll-reveal">
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <div class="md:w-1/3 mb-6 md:mb-0 order-1 md:order-2">
+                        <div class="bg-blue-100 rounded-lg p-6 h-full flex items-center justify-center">
+                            <i class="fas fa-database text-6xl text-blue-900"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pr-10 order-2 md:order-1">
+                        <h2 class="text-3xl font-bold mb-4">Database Solutions</h2>
+                        <p class="text-gray-600 mb-6">Efficient data management is crucial for business success. We design and implement custom database solutions that organize, secure, and make your data easily accessible.</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Custom Database Design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Data Migration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>API Integration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Data Backup Solutions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Real-time Data Sync</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Scalable Architecture</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition">Optimize Your Data</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All-in-One Solutions -->
+            <div id="all-in-one" class="scroll-reveal">
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <div class="md:w-1/3 mb-6 md:mb-0">
+                        <div class="bg-blue-100 rounded-lg p-6 h-full flex items-center justify-center">
+                            <i class="fas fa-cogs text-6xl text-blue-900"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-10">
+                        <h2 class="text-3xl font-bold mb-4">All-in-One Digital Solutions</h2>
+                        <p class="text-gray-600 mb-6">For businesses looking for a complete digital transformation, we offer comprehensive packages that combine all our services into one seamless solution.</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Website + E-commerce</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Mobile App Integration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>CRM System</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Inventory Management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Analytics Dashboard</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Ongoing Support & Maintenance</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition">Transform Your Business</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Not Sure What You Need?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Our experts will analyze your business requirements and recommend the perfect solution.</p>
+            <a href="contact.html" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">Get Free Consultation</a>
+        </div>
+    </section>
+  <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    </script>
+ <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4"><span class="text-yellow-400">M E</span> Combined</h3>
+                    <p class="text-gray-400">Providing cutting-edge digital solutions to help businesses thrive in the
+                        online world.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-yellow-400 transition">Services</a>
+                        </li>
+                        <li><a href="portfolio.html"
+                                class="text-gray-400 hover:text-yellow-400 transition">Portfolio</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-yellow-400 transition">About Us</a>
+                        </li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-yellow-400 transition">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#web-design"
+                                class="text-gray-400 hover:text-yellow-400 transition">Website Design</a></li>
+                        <li><a href="services.html#whatsapp"
+                                class="text-gray-400 hover:text-yellow-400 transition">WhatsApp Systems</a></li>
+                        <li><a href="services.html#auth" class="text-gray-400 hover:text-yellow-400 transition">User
+                                Authentication</a></li>
+                        <li><a href="services.html#database"
+                                class="text-gray-400 hover:text-yellow-400 transition">Database Solutions</a></li>
+                        <li><a href="services.html#all-in-one"
+                                class="text-gray-400 hover:text-yellow-400 transition">All-in-One Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i>
+                            <span class="text-gray-400">Mogadishu, Somalia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-yellow-400 mr-2"></i>
+                            <span class="text-gray-400">+252 619958215</span>
+                        </li>
+                        <li class="flex items-center">
+                            <a
+                                href="mailto:infomecombined.com@gmail.com?subject=Hello&body=I%20have%20a%20question%20about..."><i
+                                    class="fas fa-envelope text-yellow-400 mr-2"></i>
+                                <span class="text-gray-400">infomecombined.com@gmail.com </span>
+                            </a>
+                        </li>
+
+                        <li class="flex items-center">
+                            <a
+                                href="https://api.whatsapp.com/send/?phone=252619958215&text&type=phone_number&app_absent=0"><i
+                                    class="fab fa-whatsapp text-yellow-400 mr-2"></i>
+                                <span class="text-gray-400">+252 619958215</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 M E Combined. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="portfolio.html"
+                        class="text-gray-400 hover:text-yellow-400 text-sm transition">portfolio</a>
+                    <a href="services.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Terms of
+                        Service</a>
+                    <a href="blog.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Same footer as index.html -->
+</body>
+
+
+
+</html>

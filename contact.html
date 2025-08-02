@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  -->
+
+<head>
+    <!-- Same head content as index.html -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us | M E Combined</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        /* Add smooth scaleY animation to mobile menu */
+        #mobile-menu {
+            transform-origin: top;
+            transition: transform 0.3s ease, max-height 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+            transform: scaleY(0);
+        }
+
+        #mobile-menu.open {
+            transform: scaleY(1);
+            max-height: 500px;
+            /* enough to show all items */
+        }
+    </style>
+</head>
+
+<body class="font-poppins bg-white text-gray-800">
+    <!-- Same navigation as index.html -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold">
+                    <span class="text-gold-500">M E</span> Combined
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-yellow-300 transition"><i class="fas fa-home"></i> Home</a>
+                <a href="services.html" class="hover:text-yellow-300 transition"><i class="fas fa-tools"></i> Services</a>
+                <a href="portfolio.html" class="hover:text-yellow-300 transition"><i class="fas fa-folder"></i> Portfolio</a>
+                <a href="about.html" class="hover:text-yellow-300 transition"><i class="fas fa-users"></i> About Us</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition"><i class="fas fa-comments"></i> Contact</a>
+                <a href="blog.html" class="hover:text-yellow-300 transition"><i class="fas fa-newspaper"></i> Blog</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="flex-col space-y-2 px-4 pb-4 bg-blue-800">
+            <a href="index.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-home"></i> Home</a>
+            <a href="services.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-tools"></i> Services</a>
+            <a href="portfolio.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-folder"></i>
+Portfolio</a>
+            <a href="about.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-users"></i>
+About Us</a>
+            <a href="contact.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-comments"></i>
+ Contact</a>
+            <a href="blog.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-newspaper"></i>
+Blog</a>
+        </div>
+    </nav>
+
+
+
+    <!-- Contact Hero -->
+    <section class="relative bg-blue-900 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Contact <span class="text-yellow-400">Us</span></h1>
+            <p class="text-xl max-w-3xl mx-auto">We'd love to hear from you! Get in touch with our team.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Contact Form -->
+                <div class="lg:w-1/2 scroll-reveal">
+                    <h2 class="text-3xl font-bold mb-6">Send Us a Message</h2>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                                required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                                required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number
+                                (Optional)</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent" required>
+                        </div>
+                        <div>
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Service Interested
+                                In</label>
+                            <select id="service" name="service"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                                <option value="">Select a service</option>
+                                <option value="web-design">Website Design</option>
+                                <option value="whatsapp">WhatsApp Order System</option>
+                                <option value="auth">User Authentication</option>
+                                <option value="database">Database Solutions</option>
+                                <option value="all-in-one">All-in-One Solution</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <a href="Countact-me.html"
+                                class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition transform hover:scale-105">Send
+                                Message</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="lg:w-1/2 scroll-reveal">
+                    <h2 class="text-3xl font-bold mb-6">Contact Information</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div
+                                class="bg-blue-100 text-blue-900 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-1">Our Office</h3>
+                                <p class="text-gray-600">123 Business Avenue<br>Digital City, DC 10001</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="bg-blue-100 text-blue-900 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-1">Phone</h3>
+                                <p class="text-gray-600">+252 619958215<br>Mon-Fri, 9am-5pm</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="bg-blue-100 text-blue-900 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-1">Email</h3>
+                                <p class="text-gray-600"> infomecombined.com@gmail.com<br> infomecombined.com@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div
+                                class="bg-blue-100 text-blue-900 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-1">WhatsApp</h3>
+                                <p class="text-gray-600">+252 619958215<br>24/7 support for existing clients</p>
+                                <a href="https://wa.me/252619958215"
+                                    class="inline-block mt-2 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition">Chat
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="mt-10">
+                        <h3 class="text-xl font-semibold mb-4">Our Location</h3>
+                        <div class="bg-gray-200 h-64 rounded-lg overflow-hidden">
+                            <!-- Embedded Google Map -->
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12648.0!2d45.31068!3d2.03166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3d58ed7b06abcdef:0xabcdef123456789!2sKM4%20Mogadishu%2C%20Afgoye%20Road%2C%20Hodan%20District!5e0!3m2!1en!2sso!4v1722602580000"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked <span
+                        class="text-blue-900">Questions</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Find answers to common questions about our services
+                    and processes.</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden mb-4 scroll-reveal">
+                    <button
+                        class="faq-question w-full text-left p-6 bg-white hover:bg-gray-50 transition font-semibold text-lg flex justify-between items-center">
+                        <span>How long does it take to develop a custom website?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">The timeline varies depending on the complexity of your project. A
+                            basic brochure website typically takes 2-4 weeks, while more complex e-commerce or web
+                            applications can take 8-12 weeks or longer. After our initial consultation, we'll provide
+                            you with a detailed project timeline.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden mb-4 scroll-reveal">
+                    <button
+                        class="faq-question w-full text-left p-6 bg-white hover:bg-gray-50 transition font-semibold text-lg flex justify-between items-center">
+                        <span>Do you offer ongoing maintenance after project completion?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">Yes, we offer various maintenance packages to suit your needs. These
+                            can include regular updates, security patches, performance optimization, and content
+                            updates. We'll discuss maintenance options during the project planning phase.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden mb-4 scroll-reveal">
+                    <button
+                        class="faq-question w-full text-left p-6 bg-white hover:bg-gray-50 transition font-semibold text-lg flex justify-between items-center">
+                        <span>What's your payment structure?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">For most projects, we require a 30% deposit to begin work, with the
+                            remaining balance due upon project completion. For larger projects, we may establish
+                            milestone payments. Importantly, we only request final payment after you're completely
+                            satisfied with the delivered solution.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden mb-4 scroll-reveal">
+                    <button
+                        class="faq-question w-full text-left p-6 bg-white hover:bg-gray-50 transition font-semibold text-lg flex justify-between items-center">
+                        <span>Can you integrate with my existing systems?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">Absolutely! We have extensive experience integrating with various CRM
+                            systems, payment gateways, inventory management software, and other business tools. During
+                            our consultation, we'll assess your current systems and recommend the best integration
+                            approach.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden scroll-reveal">
+                    <button
+                        class="faq-question w-full text-left p-6 bg-white hover:bg-gray-50 transition font-semibold text-lg flex justify-between items-center">
+                        <span>What if I need changes after the project is completed?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">We offer a 30-day warranty period after project completion where we'll
+                            address any minor adjustments at no additional cost. After this period, we can either handle
+                            changes as individual tasks or set up a retainer agreement for ongoing support, depending on
+                            your needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Have More Questions?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Our team is ready to answer all your questions and discuss your
+                project requirements.</p>
+            <a href="tel:+252619958215"
+                class="inline-block bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105 mr-4">
+                <i class="fas fa-phone-alt mr-2"></i> Call Us Now
+            </a>
+            <a href="mailto: infomecombined.com@gmail.com"
+                class="inline-block bg-transparent hover:bg-blue-800 text-white font-bold py-3 px-8 border-2 border-white rounded-lg transition transform hover:scale-105">
+                <i class="fas fa-envelope mr-2"></i> Email Us
+            </a>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4"><span class="text-yellow-400">M E</span> Combined</h3>
+                    <p class="text-gray-400">Providing cutting-edge digital solutions to help businesses thrive in the
+                        online world.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-yellow-400 transition">Services</a>
+                        </li>
+                        <li><a href="portfolio.html"
+                                class="text-gray-400 hover:text-yellow-400 transition">Portfolio</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-yellow-400 transition">About Us</a>
+                        </li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-yellow-400 transition">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#web-design"
+                                class="text-gray-400 hover:text-yellow-400 transition">Website Design</a></li>
+                        <li><a href="services.html#whatsapp"
+                                class="text-gray-400 hover:text-yellow-400 transition">WhatsApp Systems</a></li>
+                        <li><a href="services.html#auth" class="text-gray-400 hover:text-yellow-400 transition">User
+                                Authentication</a></li>
+                        <li><a href="services.html#database"
+                                class="text-gray-400 hover:text-yellow-400 transition">Database Solutions</a></li>
+                        <li><a href="services.html#all-in-one"
+                                class="text-gray-400 hover:text-yellow-400 transition">All-in-One Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i>
+                            <span class="text-gray-400">Mogadishu, Somalia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-yellow-400 mr-2"></i>
+                            <span class="text-gray-400">+252 619958215</span>
+                        </li>
+                        <li class="flex items-center">
+                            <a
+                                href="mailto:infomecombined.com@gmail.com?subject=Hello&body=I%20have%20a%20question%20about..."><i
+                                    class="fas fa-envelope text-yellow-400 mr-2"></i>
+                                <span class="text-gray-400">infomecombined.com@gmail.com </span>
+                            </a>
+                        </li>
+
+                        <li class="flex items-center">
+                            <a
+                                href="https://api.whatsapp.com/send/?phone=252619958215&text&type=phone_number&app_absent=0"><i
+                                    class="fab fa-whatsapp text-yellow-400 mr-2"></i>
+                                <span class="text-gray-400">+252 619958215</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 M E Combined. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="portfolio.html"
+                        class="text-gray-400 hover:text-yellow-400 text-sm transition">portfolio</a>
+                    <a href="services.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Terms of
+                        Service</a>
+                    <a href="blog.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Same footer as index.html -->
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+
+                // Rotate icon
+                icon.classList.toggle('rotate-180');
+
+                // Close other open answers
+                document.querySelectorAll('.faq-question').forEach(otherButton => {
+                    if (otherButton !== button) {
+                        otherButton.nextElementSibling.classList.add('hidden');
+                        otherButton.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--  -->
+<head>
+    <!-- Same head content as index.html -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us | M E Combined</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        /* Add smooth scaleY animation to mobile menu */
+        #mobile-menu {
+            transform-origin: top;
+            transition: transform 0.3s ease, max-height 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+            transform: scaleY(0);
+        }
+        #mobile-menu.open {
+            transform: scaleY(1);
+            max-height: 500px; /* enough to show all items */
+        }
+    </style>
+</head>
+<body class="font-poppins bg-white text-gray-800">
+    <!-- Same navigation as index.html -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold">
+                    <span class="text-gold-500">M E</span> Combined
+                </a>
+            </div>
+       <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-yellow-300 transition"><i class="fas fa-home"></i> Home</a>
+                <a href="services.html" class="hover:text-yellow-300 transition"><i class="fas fa-tools"></i> Services</a>
+                <a href="portfolio.html" class="hover:text-yellow-300 transition"><i class="fas fa-folder"></i> Portfolio</a>
+                <a href="about.html" class="hover:text-yellow-300 transition"><i class="fas fa-users"></i> About Us</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition"><i class="fas fa-comments"></i> Contact</a>
+                <a href="blog.html" class="hover:text-yellow-300 transition"><i class="fas fa-newspaper"></i> Blog</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="flex-col space-y-2 px-4 pb-4 bg-blue-800">
+            <a href="index.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-home"></i> Home</a>
+            <a href="services.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-tools"></i> Services</a>
+            <a href="portfolio.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-folder"></i>
+Portfolio</a>
+            <a href="about.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-users"></i>
+About Us</a>
+            <a href="contact.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-comments"></i>
+ Contact</a>
+            <a href="blog.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-newspaper"></i>
+Blog</a>
+        </div>
+    </nav>
+
+
+    <!-- Same navigation as index.html -->
+
+    <!-- About Hero -->
+    <section class="relative bg-blue-900 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">About <span class="text-yellow-400">M E Combined</span></h1>
+            <p class="text-xl max-w-3xl mx-auto">Driving digital transformation through innovative solutions.</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 scroll-reveal">
+                    <h2 class="text-3xl font-bold mb-6">Our <span class="text-blue-900">Story</span></h2>
+                    <p class="text-gray-600 mb-6">Founded in 2024, M E Combined began as a small team of passionate developers and designers with a shared vision: to create digital solutions that empower businesses of all sizes.</p>
+                    <p class="text-gray-600 mb-6">Over the years, we've grown into a full-service digital agency, serving clients across various industries with our comprehensive range of services.</p>
+                    <p class="text-gray-600">What sets us apart is our commitment to understanding each client's unique needs and delivering tailored solutions that drive real business results.</p>
+                </div>
+                <div class="md:w-1/2 scroll-reveal">
+                    <img src="Untitled design (1).png" alt="Our Story" class="rounded-lg shadow-xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-blue-900">Mission</span> & <span class="text-blue-900">Vision</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Guiding principles that drive everything we do.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition scroll-reveal">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-bullseye text-3xl text-blue-900"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4">Mission</h3>
+                    <p class="text-gray-600 text-center">To empower businesses with innovative digital solutions that enhance their operations, engage their customers, and drive sustainable growth in an increasingly digital world.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition scroll-reveal">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-eye text-3xl text-blue-900"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4">Vision</h3>
+                    <p class="text-gray-600 text-center">To be the most trusted digital solutions partner for businesses worldwide, recognized for our technical excellence, customer-centric approach, and transformative results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-blue-900">Core Values</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">The foundation of our company culture and service delivery.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition scroll-reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-900 text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-lightbulb text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Innovation</h3>
+                    </div>
+                    <p class="text-gray-600">We constantly explore new technologies and approaches to deliver cutting-edge solutions that give our clients a competitive edge.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition scroll-reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-900 text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-handshake text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Integrity</h3>
+                    </div>
+                    <p class="text-gray-600">We maintain the highest ethical standards, ensuring transparency, honesty, and fairness in all our interactions.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition scroll-reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-900 text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-users text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Collaboration</h3>
+                    </div>
+                    <p class="text-gray-600">We believe in working closely with our clients as partners, combining our expertise with their industry knowledge for optimal results.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition scroll-reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-900 text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-trophy text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Excellence</h3>
+                    </div>
+                    <p class="text-gray-600">We strive for perfection in everything we do, delivering superior quality and exceptional service that exceeds expectations.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition scroll-reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-900 text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-heart text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Passion</h3>
+                    </div>
+                    <p class="text-gray-600">We love what we do, and this enthusiasm fuels our creativity, dedication, and commitment to our clients' success.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition scroll-reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-900 text-yellow-400 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-chart-line text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Results</h3>
+                    </div>
+                    <p class="text-gray-600">We measure our success by the tangible business outcomes we deliver for our clients, not just by the technology we implement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Meet Our <span class="text-blue-900">CEO</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">The talented professionals behind M E Combined's success.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-2 scroll-reveal">
+                    <img src="slideimg3.jpg" alt="John Smith" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Muaawiya Yuusuf</h3>
+                        <p class="text-yellow-600 font-semibold mb-3">CEO & Founder</p>
+                        <p class="text-gray-600">With over 2 years in the tech industry, Muaawiya leads our strategic vision and business development.</p>
+                        <div class="flex mt-4 space-x-3">
+                            <a href="https://www.instagram.com/taajir.kibirsan/?igsh=MXJwODNsMDVsZ3FjMA%3D%3D#" class="text-blue-900 hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
+                            <a href="https://api.whatsapp.com/send/?phone=252619958215&text&type=phone_number&app_absent=0" class="text-blue-900 hover:text-yellow-500"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-6">We're proud of our diverse team of over 30 professionals, including developers, designers, analysts, and support specialists.</p>
+                <a href="contact.html" class="inline-block bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition">Join Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Let's Work Together</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Discover how our team can help transform your business with custom digital solutions.</p>
+            <a href="contact.html" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">Contact Us Today</a>
+        </div>
+    </section>
+     <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4"><span class="text-yellow-400">M E</span> Combined</h3>
+                    <p class="text-gray-400">Providing cutting-edge digital solutions to help businesses thrive in the
+                        online world.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-yellow-400 transition">Services</a>
+                        </li>
+                        <li><a href="portfolio.html"
+                                class="text-gray-400 hover:text-yellow-400 transition">Portfolio</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-yellow-400 transition">About Us</a>
+                        </li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-yellow-400 transition">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#web-design"
+                                class="text-gray-400 hover:text-yellow-400 transition">Website Design</a></li>
+                        <li><a href="services.html#whatsapp"
+                                class="text-gray-400 hover:text-yellow-400 transition">WhatsApp Systems</a></li>
+                        <li><a href="services.html#auth" class="text-gray-400 hover:text-yellow-400 transition">User
+                                Authentication</a></li>
+                        <li><a href="services.html#database"
+                                class="text-gray-400 hover:text-yellow-400 transition">Database Solutions</a></li>
+                        <li><a href="services.html#all-in-one"
+                                class="text-gray-400 hover:text-yellow-400 transition">All-in-One Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i>
+                            <span class="text-gray-400">Mogadishu, Somalia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-yellow-400 mr-2"></i>
+                            <span class="text-gray-400">+252 619958215</span>
+                        </li>
+                        <li class="flex items-center">
+                            <a
+                                href="mailto:infomecombined.com@gmail.com?subject=Hello&body=I%20have%20a%20question%20about..."><i
+                                    class="fas fa-envelope text-yellow-400 mr-2"></i>
+                                <span class="text-gray-400">infomecombined.com@gmail.com </span>
+                            </a>
+                        </li>
+
+                        <li class="flex items-center">
+                            <a
+                                href="https://api.whatsapp.com/send/?phone=252619958215&text&type=phone_number&app_absent=0"><i
+                                    class="fab fa-whatsapp text-yellow-400 mr-2"></i>
+                                <span class="text-gray-400">+252 619958215</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 M E Combined. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="portfolio.html"
+                        class="text-gray-400 hover:text-yellow-400 text-sm transition">portfolio</a>
+                    <a href="services.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Terms of
+                        Service</a>
+                    <a href="blog.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Same footer as index.html -->
+     <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

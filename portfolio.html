@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head content as index.html -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Portfolio | M E Combined</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        /* Add smooth scaleY animation to mobile menu */
+        #mobile-menu {
+            transform-origin: top;
+            transition: transform 0.3s ease, max-height 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+            transform: scaleY(0);
+        }
+        #mobile-menu.open {
+            transform: scaleY(1);
+            max-height: 500px; /* enough to show all items */
+        }
+    </style>
+</head>
+<body class="font-poppins bg-white text-gray-800">
+    <!-- Same navigation as index.html -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold">
+                    <span class="text-gold-500">M E</span> Combined
+                </a>
+            </div>
+          <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-yellow-300 transition"><i class="fas fa-home"></i> Home</a>
+                <a href="services.html" class="hover:text-yellow-300 transition"><i class="fas fa-tools"></i> Services</a>
+                <a href="portfolio.html" class="hover:text-yellow-300 transition"><i class="fas fa-folder"></i> Portfolio</a>
+                <a href="about.html" class="hover:text-yellow-300 transition"><i class="fas fa-users"></i> About Us</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition"><i class="fas fa-comments"></i> Contact</a>
+                <a href="blog.html" class="hover:text-yellow-300 transition"><i class="fas fa-newspaper"></i> Blog</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="flex-col space-y-2 px-4 pb-4 bg-blue-800">
+            <a href="index.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-home"></i> Home</a>
+            <a href="services.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-tools"></i> Services</a>
+            <a href="portfolio.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-folder"></i>
+Portfolio</a>
+            <a href="about.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-users"></i>
+About Us</a>
+            <a href="contact.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-comments"></i>
+ Contact</a>
+            <a href="blog.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-newspaper"></i>
+Blog</a>
+        </div>
+    </nav>
+
+    <!-- Portfolio Hero -->
+    <section class="relative bg-blue-900 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our <span class="text-yellow-400">Portfolio</span></h1>
+            <p class="text-xl max-w-3xl mx-auto">Explore our successful projects and see what we can do for your business.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center mb-8">
+                <button class="filter-btn active px-4 py-2 m-2 rounded-full bg-blue-900 text-white" data-filter="all">All Projects</button>
+                <button class="filter-btn px-4 py-2 m-2 rounded-full bg-gray-200 hover:bg-blue-900 hover:text-white transition" data-filter="web">Website Design</button>
+                <button class="filter-btn px-4 py-2 m-2 rounded-full bg-gray-200 hover:bg-blue-900 hover:text-white transition" data-filter="whatsapp">WhatsApp Systems</button>
+                <button class="filter-btn px-4 py-2 m-2 rounded-full bg-gray-200 hover:bg-blue-900 hover:text-white transition" data-filter="auth">Authentication</button>
+                <button class="filter-btn px-4 py-2 m-2 rounded-full bg-gray-200 hover:bg-blue-900 hover:text-white transition" data-filter="database">Database</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="portfolio-item web" data-category="web">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                        <div class="relative overflow-hidden h-64">
+                            <img src="E-commerce Website.jpg" alt="E-commerce Website" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                            <div class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <a href="project-detail.html" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition">View Details</a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                            <p class="text-gray-600 mb-4">Complete online store with payment integration and inventory management.</p>
+                            <div class="flex flex-wrap">
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">Website</span>
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">E-commerce</span>
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item whatsapp" data-category="whatsapp">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                        <div class="relative overflow-hidden h-64">
+                            <img src="WhatsApp Order System.jpg" alt="WhatsApp Order System" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                            <div class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <a href="project-detail.html" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition">View Details</a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Restaurant Order System</h3>
+                            <p class="text-gray-600 mb-4">WhatsApp-based food ordering and payment confirmation system.</p>
+                            <div class="flex flex-wrap">
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">WhatsApp</span>
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">Automation</span>
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">Food Delivery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item auth database" data-category="auth,database">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                        <div class="relative overflow-hidden h-64">
+                            <img src="Membership Portal.jpg" alt="Membership Portal" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                            <div class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <a href="project-detail.html" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition">View Details</a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Membership Portal</h3>
+                            <p class="text-gray-600 mb-4">Secure member area with role-based access and payment integration.</p>
+                            <div class="flex flex-wrap">
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">Authentication</span>
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">Database</span>
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">Payments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item web" data-category="web">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                        <div class="relative overflow-hidden h-64">
+                            <img src="Corporate Website.jpg" alt="Corporate Website" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                            <div class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <a href="project-detail.html" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition">View Details</a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Corporate Website</h3>
+                            <p class="text-gray-600 mb-4">Modern corporate website with CMS and multilingual support.</p>
+                            <div class="flex flex-wrap">
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">Website</span>
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">CMS</span>
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">Multilingual</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item whatsapp database" data-category="whatsapp,database">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                        <div class="relative overflow-hidden h-64">
+                            <img src="Retail Inventory System.jpg" alt="Retail Inventory System" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                            <div class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <a href="project-detail.html" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition">View Details</a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Retail Inventory System</h3>
+                            <p class="text-gray-600 mb-4">WhatsApp ordering with real-time inventory updates.</p>
+                            <div class="flex flex-wrap">
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">WhatsApp</span>
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">Inventory</span>
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">Database</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item auth" data-category="auth">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                        <div class="relative overflow-hidden h-64">
+                            <img src="SSO Solution.jpg" alt="SSO Solution" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                            <div class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                                <a href="project-detail.html" class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-2 px-4 rounded-lg transition">View Details</a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Single Sign-On Solution</h3>
+                            <p class="text-gray-600 mb-4">Centralized authentication for multiple applications.</p>
+                            <div class="flex flex-wrap">
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">Authentication</span>
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">Security</span>
+                                <span class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded mr-2 mb-2">SSO</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Let's discuss how we can create a custom solution for your business needs.</p>
+            <a href="contact.html" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">Get Free Quote</a>
+        </div>
+    </section>
+ <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4"><span class="text-yellow-400">M E</span> Combined</h3>
+                    <p class="text-gray-400">Providing cutting-edge digital solutions to help businesses thrive in the
+                        online world.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-yellow-400 transition">Services</a>
+                        </li>
+                        <li><a href="portfolio.html"
+                                class="text-gray-400 hover:text-yellow-400 transition">Portfolio</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-yellow-400 transition">About Us</a>
+                        </li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-yellow-400 transition">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#web-design"
+                                class="text-gray-400 hover:text-yellow-400 transition">Website Design</a></li>
+                        <li><a href="services.html#whatsapp"
+                                class="text-gray-400 hover:text-yellow-400 transition">WhatsApp Systems</a></li>
+                        <li><a href="services.html#auth" class="text-gray-400 hover:text-yellow-400 transition">User
+                                Authentication</a></li>
+                        <li><a href="services.html#database"
+                                class="text-gray-400 hover:text-yellow-400 transition">Database Solutions</a></li>
+                        <li><a href="services.html#all-in-one"
+                                class="text-gray-400 hover:text-yellow-400 transition">All-in-One Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i>
+                            <span class="text-gray-400">Mogadishu, Somalia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-yellow-400 mr-2"></i>
+                            <span class="text-gray-400">+252 619958215</span>
+                        </li>
+                        <li class="flex items-center">
+                            <a
+                                href="mailto:infomecombined.com@gmail.com?subject=Hello&body=I%20have%20a%20question%20about..."><i
+                                    class="fas fa-envelope text-yellow-400 mr-2"></i>
+                                <span class="text-gray-400">infomecombined.com@gmail.com </span>
+                            </a>
+                        </li>
+
+                        <li class="flex items-center">
+                            <a
+                                href="https://api.whatsapp.com/send/?phone=252619958215&text&type=phone_number&app_absent=0"><i
+                                    class="fab fa-whatsapp text-yellow-400 mr-2"></i>
+                                <span class="text-gray-400">+252 619958215</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 M E Combined. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="portfolio.html"
+                        class="text-gray-400 hover:text-yellow-400 text-sm transition">portfolio</a>
+                    <a href="services.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Terms of
+                        Service</a>
+                    <a href="blog.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Same footer as index.html -->
+
+    <script>
+        // Portfolio Filter
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active', 'bg-blue-900', 'text-white'));
+                    filterButtons.forEach(btn => btn.classList.add('bg-gray-200'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active', 'bg-blue-900', 'text-white');
+                    this.classList.remove('bg-gray-200');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category').includes(filterValue)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+       <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

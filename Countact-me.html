@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us | M E Combined</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        /* (Isticmaal style-kaaga sida aad u siisay) */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0b1d3b;
+            height: 100vh;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #FFD700;
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: rgb(255, 255, 255);
+            height: 60px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+            z-index: 1000;
+        }
+
+        nav img {
+            height: 45px;
+            user-select: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        nav ul li a {
+            font-weight: 600;
+            font-size: 17px;
+            color: rgb(5, 28, 63);
+            padding: 6px 8px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #FFD700;
+            color: rgb(245, 246, 247);
+            outline: none;
+        }
+        .szz{
+            text-transform: uppercase;
+            font-weight: bold;
+
+        }
+        .bil{
+            font-size: x-large;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+            width: 26px;
+            height: 22px;
+            justify-content: center;
+            user-select: none;
+        }
+
+        .hamburger div {
+            height: 3px;
+            background-color: rgb(12, 37, 83);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active div:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active div:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                position: absolute;
+                top: 60px;
+                right: 30px;
+                background-color: #0b1d3b;
+                flex-direction: column;
+                width: 200px;
+                max-height: 0;
+                overflow: hidden;
+                border-radius: 8px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+                padding: 0;
+            }
+
+            nav ul.show {
+                max-height: 160px;
+                padding: 8px 0;
+                overflow-y: auto;
+            }
+
+            nav ul li {
+                padding: 14px 22px;
+            }
+
+            nav ul li a {
+                font-size: 17px;
+                width: 100%;
+                color: white !important;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        nav.scrolled ul li a {
+            color: #0b1d3b !important;
+        }
+
+        nav.scrolled ul li a:hover,
+        nav.scrolled ul li a:focus {
+            color: #4caf50 !important;
+        }
+
+        .chat-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            width: 100%;
+            max-width: 900px;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .center-box {
+            background-color: #ffffff10;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+            font-size: 15px;
+            background-color: #fff;
+            color: #0b1d3b;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #aa8304;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .chat-container {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding: 15px;
+            overflow-y: auto;
+            background-color: #ffffff10;
+            border-radius: 10px;
+            min-height: 300px;
+            max-height: calc(100vh - 180px);
+        }
+
+        .message {
+            max-width: 75%;
+            padding: 10px 15px;
+            border-radius: 18px;
+            font-size: 15px;
+            word-wrap: break-word;
+            margin: 10px 0;
+        }
+
+        .user-message {
+            background-color: #04aa6d;
+            align-self: flex-end;
+            color: #fff;
+            border-bottom-right-radius: 0;
+        }
+
+        .bot-message {
+            background-color: #fff;
+            align-self: flex-start;
+            color: #0b1d3b;
+            border-bottom-left-radius: 0;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            background-color: #ffffff10;
+            border-top: 1px solid #ffffff30;
+            align-items: center;
+            gap: 10px;
+            position: sticky;
+            bottom: 0;
+            z-index: 100;
+            justify-content: center;
+        }
+
+        textarea {
+            flex: 1;
+            font-size: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            resize: none;
+            height: 40px;
+            background-color: #fff;
+            color: #0b1d3b;
+        }
+
+        .send-btn {
+            background-color:#FFD700;
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .send-btn i {
+            font-size: 18px;
+        }
+
+        /* Modal background */
+        #modalOverlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Modal box */
+        #modalBox {
+            background: white;
+            padding: 20px 25px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 400px;
+            color: #0b1d3b;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #modalBox h3 {
+            margin-bottom: 15px;
+        }
+
+        #modalBox input {
+            margin-bottom: 12px;
+        }
+
+        #modalBox button {
+            width: 100%;
+            background-color: #000066;
+            color: white;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .chat-wrapper {
+                width: 100%;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <span class="szz"> <span class="bil">M E</span> Combined</span>
+        <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="navLinks">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="chat-wrapper">
+        <!-- Chat container iyo input waa muuqdaan had iyo jeer -->
+        <div class="chat-container" id="chatContainer"></div>
+
+        <div class="input-container" id="inputContainer">
+            <textarea id="messageInput" placeholder="Please type your message."></textarea>
+            <button class="send-btn" id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+
+        <!-- Intro form (email + phone) oo initially qarsan -->
+        <div id="modalOverlay">
+            <div id="modalBox">
+                <h3>Please enter your email and phone number</h3>
+                <input type="email" id="modalEmail" placeholder="Your email" required />
+                <input type="tel" id="modalPhone" placeholder="Your phone_number" required />
+                <button id="modalSendBtn">Send message</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+        const supabase = createClient(
+            'https://wajvogixhhufnxkphooy.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhanZvZ2l4aGh1Zm54a3Bob295Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQxNDcwMzgsImV4cCI6MjA2OTcyMzAzOH0.iTQxs3inTPdZ6MeBEenXIoRqs5SyHt7qaMwpOs1uwUM'
+        );
+
+        const chatContainer = document.getElementById('chatContainer');
+        const messageInput = document.getElementById('messageInput');
+        const sendBtn = document.getElementById('sendBtn');
+
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalEmail = document.getElementById('modalEmail');
+        const modalPhone = document.getElementById('modalPhone');
+        const modalSendBtn = document.getElementById('modalSendBtn');
+
+        let email = '';
+        let phone = '';
+        let pendingMessage = '';
+
+        // Marka user riixo send, haddii email/phone la hayn, modal soo baxo
+        sendBtn.addEventListener('click', () => {
+            const msg = messageInput.value.trim();
+            if (!msg) {
+                alert('Please type your message.');
+                return;
+            }
+
+            if (!email || !phone) {
+                // keydi farriinta marka user qoro, laakin ha dirin ilaa email+phone la helo
+                pendingMessage = msg;
+                modalOverlay.style.display = 'flex';
+                return;
+            }
+
+            // Haddii email+phone la haysto, fariinta dir
+            sendComplaint(msg);
+        });
+
+        // Marka modal-ka email+phone la dirayo
+        modalSendBtn.addEventListener('click', () => {
+            const e = modalEmail.value.trim();
+            const p = modalPhone.value.trim();
+
+            if (!e || !p) {
+                alert('Please enter your email and phone number.');
+                return;
+            }
+
+            email = e;
+            phone = p;
+
+            modalOverlay.style.display = 'none';
+
+            // Haddii pending message jiro, dir hadda
+            if (pendingMessage) {
+                sendComplaint(pendingMessage);
+                pendingMessage = '';
+            }
+        });
+
+        // Function diritaanka fariinta
+        async function sendComplaint(message) {
+            addMessage(message, 'user');
+            messageInput.value = '';
+
+            const { error } = await supabase.from('complaints').insert([{ email, phone, message }]);
+
+            if (error) {
+                addMessage("❌ Your message could not be sent. Please ensure you have an active internet connection and try again.", "bot");
+            } else {
+                addMessage("✅ Message sent. Thank you!", "bot");
+            }
+        }
+
+        // Function si farriinta chat container loogu daro
+        function addMessage(text, type) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `message ${type === 'user' ? 'user-message' : 'bot-message'}`;
+            msgDiv.textContent = text;
+            chatContainer.appendChild(msgDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // Nav hamburger toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            hamburger.classList.toggle('active');
+        });
+
+        hamburger.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navLinks.classList.toggle('show');
+                hamburger.classList.toggle('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

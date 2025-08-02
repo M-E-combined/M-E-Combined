@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog | M E Combined</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        /* Add smooth scaleY animation to mobile menu */
+        #mobile-menu {
+            transform-origin: top;
+            transition: transform 0.3s ease, max-height 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+            transform: scaleY(0);
+        }
+
+        #mobile-menu.open {
+            transform: scaleY(1);
+            max-height: 500px;
+            /* enough to show all items */
+        }
+    </style>
+</head>
+
+<body class="font-poppins bg-white text-gray-800">
+    <!-- Same navigation as index.html -->
+    <nav class="bg-blue-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold">
+                    <span class="text-gold-500">M E</span> Combined
+                </a>
+            </div>
+    <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-yellow-300 transition"><i class="fas fa-home"></i> Home</a>
+                <a href="services.html" class="hover:text-yellow-300 transition"><i class="fas fa-tools"></i> Services</a>
+                <a href="portfolio.html" class="hover:text-yellow-300 transition"><i class="fas fa-folder"></i> Portfolio</a>
+                <a href="about.html" class="hover:text-yellow-300 transition"><i class="fas fa-users"></i> About Us</a>
+                <a href="contact.html" class="hover:text-yellow-300 transition"><i class="fas fa-comments"></i> Contact</a>
+                <a href="blog.html" class="hover:text-yellow-300 transition"><i class="fas fa-newspaper"></i> Blog</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="flex-col space-y-2 px-4 pb-4 bg-blue-800">
+            <a href="index.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-home"></i> Home</a>
+            <a href="services.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-tools"></i> Services</a>
+            <a href="portfolio.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-folder"></i>
+Portfolio</a>
+            <a href="about.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-users"></i>
+About Us</a>
+            <a href="contact.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-comments"></i>
+ Contact</a>
+            <a href="blog.html" class="block py-2 hover:text-yellow-300 transition"><i class="fas fa-newspaper"></i>
+Blog</a>
+        </div>
+    </nav>
+    <!-- Blog Hero -->
+    <section class="relative bg-blue-900 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our <span class="text-yellow-400">Blog</span></h1>
+            <p class="text-xl max-w-3xl mx-auto">Insights, tips, and news about digital solutions and technology trends.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Main Blog Posts -->
+                <div class="lg:w-2/3">
+                    <!-- Featured Post -->
+                    <div class="mb-16 scroll-reveal">
+                        <div class="rounded-lg overflow-hidden shadow-lg mb-6">
+                            <img src="6.png" alt="Featured Blog Post" class="w-full h-96 object-cover">
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <span
+                                class="bg-blue-100 text-blue-900 text-sm font-semibold px-3 py-1 rounded-full mr-3">Web
+                                Design</span>
+                            <span class="text-gray-500 text-sm">June 15, 2025</span>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-4">The Future of Responsive Web Design in 2025</h2>
+                        <p class="text-gray-600 mb-6">Explore the latest trends in responsive design and how they're
+                            shaping user experiences across devices. Learn about emerging techniques that go beyond
+                            traditional breakpoints.</p>
+                        <a href="services.html#web-design"
+                            class="text-yellow-600 font-semibold hover:text-yellow-700 transition">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Blog Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Post 1 -->
+                        <div
+                            class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-2 scroll-reveal">
+                            <img src="2.png" alt="Blog Post 1" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span
+                                        class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded-full mr-2">WhatsApp</span>
+                                    <span class="text-gray-500 text-xs">May 28, 2025</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">How WhatsApp Order Systems Are Revolutionizing Small
+                                    Businesses</h3>
+                                <p class="text-gray-600 mb-4">Discover how small businesses are leveraging WhatsApp
+                                    automation to streamline sales and improve customer service.</p>
+                                <a href="services.html#whatsapp"
+                                    class="text-yellow-600 font-semibold hover:text-yellow-700 transition">Read More
+                                    →</a>
+                            </div>
+                        </div>
+
+                        <!-- Post 2 -->
+                        <div
+                            class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-2 scroll-reveal">
+                            <img src="3.png" alt="Blog Post 2" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span
+                                        class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded-full mr-2">Security</span>
+                                    <span class="text-gray-500 text-xs">April 15, 2025</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Best Practices for User Authentication in 2023</h3>
+                                <p class="text-gray-600 mb-4">Learn about the latest authentication methods and security
+                                    protocols to protect your users' data effectively.</p>
+                                <a href="services.html#auth"
+                                    class="text-yellow-600 font-semibold hover:text-yellow-700 transition">Read More
+                                    →</a>
+                            </div>
+                        </div>
+
+                        <!-- Post 3 -->
+                        <div
+                            class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-2 scroll-reveal">
+                            <img src="sss.png" alt="Blog Post 3" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span
+                                        class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded-full mr-2">Database</span>
+                                    <span class="text-gray-500 text-xs">March 22, 2025</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">Choosing the Right Database Solution for Your
+                                    Business</h3>
+                                <p class="text-gray-600 mb-4">A comprehensive guide to selecting the perfect database
+                                    system based on your specific business requirements.</p>
+                                <a href="services.html#database"
+                                    class="text-yellow-600 font-semibold hover:text-yellow-700 transition">Read More
+                                    →</a>
+                            </div>
+                        </div>
+
+                        <!-- Post 4 -->
+                        <div
+                            class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition transform hover:-translate-y-2 scroll-reveal">
+                            <img src="SSO Solution.jpg" alt="Blog Post 4" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <div class="flex items-center mb-3">
+                                    <span
+                                        class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded-full mr-2">SEO</span>
+                                    <span class="text-gray-500 text-xs">February 10, 2025</span>
+                                </div>
+                                <h3 class="text-xl font-bold mb-3">SEO Strategies That Actually Work in 2023</h3>
+                                <p class="text-gray-600 mb-4">Cut through the noise with these proven SEO techniques
+                                    that deliver real results for businesses of all sizes.<a
+                                        href="services.html#all-in-one"
+                                        class="text-yellow-600 font-semibold hover:text-yellow-700 transition"> <br> <br>
+                                        Read More→</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="flex justify-center mt-12">
+                        <nav class="flex items-center space-x-2">
+                            <a href="#"
+                                class="px-4 py-2 border border-gray-300 rounded-lg text-blue-900 hover:bg-blue-900 hover:text-white transition">&laquo;
+                                Previous</a>
+                            <a href="#" class="px-4 py-2 border border-gray-300 rounded-lg bg-blue-900 text-white">1</a>
+                            <a href="#"
+                                class="px-4 py-2 border border-gray-300 rounded-lg text-blue-900 hover:bg-blue-900 hover:text-white transition">2</a>
+                            <a href="#"
+                                class="px-4 py-2 border border-gray-300 rounded-lg text-blue-900 hover:bg-blue-900 hover:text-white transition">3</a>
+                            <a href="#"
+                                class="px-4 py-2 border border-gray-300 rounded-lg text-blue-900 hover:bg-blue-900 hover:text-white transition">Next
+                                &raquo;</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:w-1/3">
+                    <!-- Search -->
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-8 scroll-reveal">
+                        <h3 class="text-xl font-bold mb-4">Search Blog</h3>
+                        <form class="flex">
+                            <input type="text" placeholder="Search articles..."
+                                class="flex-grow px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent">
+                            <button type="submit"
+                                class="bg-blue-900 hover:bg-blue-800 text-white px-4 py-2 rounded-r-lg transition">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-8 scroll-reveal">
+                        <h3 class="text-xl font-bold mb-4">Categories</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#"
+                                    class="flex justify-between items-center text-gray-700 hover:text-yellow-500 transition">
+                                    <span>Website Design</span>
+                                    <span
+                                        class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded-full">12</span>
+                                </a></li>
+                            <li><a href="#"
+                                    class="flex justify-between items-center text-gray-700 hover:text-yellow-500 transition">
+                                    <span>WhatsApp Systems</span>
+                                    <span
+                                        class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded-full">8</span>
+                                </a></li>
+                            <li><a href="#"
+                                    class="flex justify-between items-center text-gray-700 hover:text-yellow-500 transition">
+                                    <span>User Authentication</span>
+                                    <span
+                                        class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded-full">5</span>
+                                </a></li>
+                            <li><a href="#"
+                                    class="flex justify-between items-center text-gray-700 hover:text-yellow-500 transition">
+                                    <span>Database Solutions</span>
+                                    <span
+                                        class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded-full">7</span>
+                                </a></li>
+                            <li><a href="#"
+                                    class="flex justify-between items-center text-gray-700 hover:text-yellow-500 transition">
+                                    <span>Business Growth</span>
+                                    <span
+                                        class="bg-blue-100 text-blue-900 text-xs font-semibold px-2 py-1 rounded-full">9</span>
+                                </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Popular Posts -->
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-8 scroll-reveal">
+                        <h3 class="text-xl font-bold mb-4">Popular Posts</h3>
+                        <div class="space-y-4">
+                            <a href="#" class="flex items-start group">
+                                <div class="flex-shrink-0 mr-4">
+                                    <img src="w1.png" alt="Popular Post 1"
+                                        class="w-16 h-16 object-cover rounded-lg">
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold group-hover:text-yellow-500 transition">10 Essential
+                                        Features for Your E-learning  Website
+                                    </h4>
+                                    <p class="text-gray-500 text-sm">June 5, 2025</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex items-start group">
+                                <div class="flex-shrink-0 mr-4">
+                                    <img src="7.png" alt="Popular Post 2"
+                                        class="w-16 h-16 object-cover rounded-lg">
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold group-hover:text-yellow-500 transition">How to Secure Your
+                                        Website from Common Threats</h4>
+                                    <p class="text-gray-500 text-sm">June 18, 2025</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex items-start group">
+                                <div class="flex-shrink-0 mr-4">
+                                    <img src="5.png" alt="Popular Post 3"
+                                        class="w-16 h-16 object-cover rounded-lg">
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold group-hover:text-yellow-500 transition">The Rise of
+                                        Conversational Commerce via WhatsApp</h4>
+                                    <p class="text-gray-500 text-sm">April 30, 2025</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="bg-white p-6 rounded-lg shadow-md scroll-reveal">
+                        <h3 class="text-xl font-bold mb-4">Tags</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#"
+                                class="bg-blue-100 hover:bg-blue-900 hover:text-white text-blue-900 text-sm font-semibold px-3 py-1 rounded-full transition">Web
+                                Design</a>
+                            <a href="#"
+                                class="bg-blue-100 hover:bg-blue-900 hover:text-white text-blue-900 text-sm font-semibold px-3 py-1 rounded-full transition">E-commerce</a>
+                            <a href="#"
+                                class="bg-blue-100 hover:bg-blue-900 hover:text-white text-blue-900 text-sm font-semibold px-3 py-1 rounded-full transition">Security</a>
+                            <a href="#"
+                                class="bg-blue-100 hover:bg-blue-900 hover:text-white text-blue-900 text-sm font-semibold px-3 py-1 rounded-full transition">WhatsApp</a>
+                            <a href="#"
+                                class="bg-blue-100 hover:bg-blue-900 hover:text-white text-blue-900 text-sm font-semibold px-3 py-1 rounded-full transition">Database</a>
+                            <a href="#"
+                                class="bg-blue-100 hover:bg-blue-900 hover:text-white text-blue-900 text-sm font-semibold px-3 py-1 rounded-full transition">SEO</a>
+                            <a href="#"
+                                class="bg-blue-100 hover:bg-blue-900 hover:text-white text-blue-900 text-sm font-semibold px-3 py-1 rounded-full transition">UX/UI</a>
+                            <a href="#"
+                                class="bg-blue-100 hover:bg-blue-900 hover:text-white text-blue-900 text-sm font-semibold px-3 py-1 rounded-full transition">Mobile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-blue-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Subscribe to Our Newsletter</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Get the latest digital solutions tips and industry news delivered
+                to your inbox.</p>
+            <form class="max-w-2xl mx-auto flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="Your email address"
+                    class="flex-grow px-6 py-3 rounded-lg focus:outline-none text-gray-900">
+                <button type="submit"
+                    class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">Subscribe</button>
+            </form>
+            <p class="text-sm mt-4 text-blue-200">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </section>
+ <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4"><span class="text-yellow-400">M E</span> Combined</h3>
+                    <p class="text-gray-400">Providing cutting-edge digital solutions to help businesses thrive in the
+                        online world.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-yellow-400 transition">Services</a>
+                        </li>
+                        <li><a href="portfolio.html"
+                                class="text-gray-400 hover:text-yellow-400 transition">Portfolio</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-yellow-400 transition">About Us</a>
+                        </li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-yellow-400 transition">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#web-design"
+                                class="text-gray-400 hover:text-yellow-400 transition">Website Design</a></li>
+                        <li><a href="services.html#whatsapp"
+                                class="text-gray-400 hover:text-yellow-400 transition">WhatsApp Systems</a></li>
+                        <li><a href="services.html#auth" class="text-gray-400 hover:text-yellow-400 transition">User
+                                Authentication</a></li>
+                        <li><a href="services.html#database"
+                                class="text-gray-400 hover:text-yellow-400 transition">Database Solutions</a></li>
+                        <li><a href="services.html#all-in-one"
+                                class="text-gray-400 hover:text-yellow-400 transition">All-in-One Solutions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i>
+                            <span class="text-gray-400">Mogadishu, Somalia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-yellow-400 mr-2"></i>
+                            <span class="text-gray-400">+252 619958215</span>
+                        </li>
+                        <li class="flex items-center">
+                            <a
+                                href="mailto:infomecombined.com@gmail.com?subject=Hello&body=I%20have%20a%20question%20about..."><i
+                                    class="fas fa-envelope text-yellow-400 mr-2"></i>
+                                <span class="text-gray-400">infomecombined.com@gmail.com </span>
+                            </a>
+                        </li>
+
+                        <li class="flex items-center">
+                            <a
+                                href="https://api.whatsapp.com/send/?phone=252619958215&text&type=phone_number&app_absent=0"><i
+                                    class="fab fa-whatsapp text-yellow-400 mr-2"></i>
+                                <span class="text-gray-400">+252 619958215</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 M E Combined. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="portfolio.html"
+                        class="text-gray-400 hover:text-yellow-400 text-sm transition">portfolio</a>
+                    <a href="services.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Terms of
+                        Service</a>
+                    <a href="blog.html" class="text-gray-400 hover:text-yellow-400 text-sm transition">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Same footer as index.html -->
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>
